@@ -18,4 +18,9 @@ app.use(express.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: false })); // for parsing application/x-www-form-urlencoded
 app.use(bodyParser.json());
 
+
+app.get('/', (req, res) => {
+  res.render('index')
+});
+
 app.listen(port)

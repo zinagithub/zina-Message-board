@@ -23,4 +23,11 @@ app.get('/', (req, res) => {
   res.render('index')
 });
 
+app.post('/', (req, res) => {
+  if (req.body.message === undefined || req.body.message === ''){
+  	 res.render('index', { mesg: 'Your message is empty' })
+  }	
+  
+})
+
 app.listen(port)

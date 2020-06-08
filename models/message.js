@@ -10,6 +10,14 @@ class Message {
        })
     }
 
+    static all(cb) {
+        
+        connection.query('SELECT * FROM messages', (err, rows) => {
+            if (err) throw err
+                cb(rows)
+        })
+    }
+
 
 }
 

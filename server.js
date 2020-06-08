@@ -30,8 +30,13 @@ app.use(session({
 app.use(require('./middlewares/flashs'))
 
 app.get('/', (req, res) => {
-     
-  res.render('index')
+    
+  let Message = require('./models/message')
+  
+  Message.all(function(messages){
+    
+    res.render('index', { obj: messages })
+  }) 
   
   });
 

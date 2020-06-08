@@ -32,6 +32,20 @@
                 <i class="icon edit"></i>Submit
             </button>
         </form>
+
+        <div class="ui comments">
+            <h3 class="ui dividing header">Comments</h3>
+            <%  for (message of obj) { %>
+            <div class="comment">
+                <div class="content">
+                    <div class="test">
+                            <%= message.content %>                                           
+                    </div>
+                </div>
+            </div>      
+            <% } %>
+               
+        </div>
     </div>
 </body>
 </html>

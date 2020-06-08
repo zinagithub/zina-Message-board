@@ -12,10 +12,16 @@
     </div>
 
     <div class="ui main container" style = "margin-top: 7em;">
-        <% if (locals.error) { %> 
+        <% if (locals.flash && locals.flash.error) { %> 
         <div class="ui negative message">
-            <%= locals.error %> 
+            <%= flash.error %> 
         </div>
+        <% } %> 
+
+        <% if (locals.flash && locals.flash.succses) { %> 
+            <div class="ui positive message">
+                <%= flash.succses %> 
+            </div>
         <% } %>  
         <form action="/" method = "post" class='ui form'>
             <div class="field">
